@@ -8,8 +8,8 @@ import data from "../data"
 import Lists from "../components/homepageComponents/lists"
 import Services from "../components/homepageComponents/servicesComponent"
 import Footer from "../components/footer/footer"
-import TestimonialComponent from "../components/testimonialComponent/testimonialComponent"
-import NewsComponent from "../components/newsComponent/newsComponent"
+import MovieComponent from "../components/movieComponent/movieComponent"
+import TrendingComponent from "../components/trendingComponent/trendingComponent"
 
 function Home() { 
     const [screenSize, setScreenSize] = useState(window.innerWidth)
@@ -40,7 +40,6 @@ function Home() {
             <Navbar />
             <Banner />
             <main className="home">
-
                 <section className="sm:container mx-auto py-16 px-10 xl:px-40 text-slate-800 text-center grid flex">
                     <h2 className="font-bold text-3xl xl:text-5xl pb-5 xl:pb-14 text-center">Header Title</h2>
                     <p className="font-normal text-justify text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -78,11 +77,11 @@ function Home() {
                     </article>
                 </section>
 
-                <NewsComponent />
-                <TestimonialComponent />
+                <TrendingComponent />
+                <MovieComponent />
 
                 <section className="bg-white">
-                    <article className="sm:container mx-auto bg-no-repeat bg-blue-900 md:bg-none md:bg-cover p-10 md:p-24" style={{backgroundImage: screenSize > 1280 ? `url(${QuoteImg})` : "" }}>
+                    <article className="sm:container mx-auto bg-no-repeat bg-blue-900 md:bg-none md:bg-cover p-10 md:p-24 mb-0 xl:mb-16" style={{backgroundImage: screenSize > 1280 ? `url(${QuoteImg})` : "" }}>
                         <div className="w-full xl:w-1/3">
                             <span className="text-1xl xl:text-2xl italic font-normal text-orange-300">sed quia non numquam</span>
                             <h2 className="text-3xl xl:text-5xl font-semibold text-white xl:pt-4 pb-10">Can’t find an active role that suits you?</h2>

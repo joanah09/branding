@@ -2,15 +2,15 @@ export default {
     "navbar": [
         {
             "name": "About",
-            "link": "about"
+            "link": ""
         },
         {
             "name": "News",
-            "link": "news"
+            "link": "/news"
         },
         {
             "name": "Contact",
-            "link": "contact"
+            "link": ""
         }
     ],
     "homepage": {

@@ -2,24 +2,24 @@ import { useEffect, useState } from "react"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Testimonials from "../testimonialComponent/testimonial"
+import Movie from "../movieComponent/movie"
 
-function TestimonialComponent() {
-    const [testimonials, setTestimonails] = useState([]) 
+function MovieComponent() {
+    const [movieData, setMovieData] = useState([]) 
     useEffect(() => {
         async function getData() {
-            const res = await fetch("https://testimonialapi.toolcarton.com/api")
+            const res = await fetch("https://ghibliapi.herokuapp.com/films")
             const data = await res.json()
-            setTestimonails(data)
+            setMovieData(data)
         }
         getData()
     }, [])
 
-    const testi = testimonials.map((item, id) => {
-        return <Testimonials key={id} 
+    const movie = movieData.map((item, id) => {
+        return <Movie key={id} 
         {...item} /> 
      })
-    const testimonialsSlider = {
+    const movieSlider = {
         dots: true,
         infinite: true,
         speed: 500,
@@ -39,8 +39,8 @@ function TestimonialComponent() {
     return(
         <section className="bg-white">
             <article className="sm:container mx-auto py-16 px-10 xl:px-40">
-                <Slider {...testimonialsSlider}>
-                    {testi}
+                <Slider {...movieSlider}>
+                    {movie}
                 </Slider>
             </article> 
         </section>
@@ -48,4 +48,4 @@ function TestimonialComponent() {
     ) 
 }
 
-export default TestimonialComponent
+export default MovieComponent

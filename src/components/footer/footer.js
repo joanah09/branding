@@ -10,7 +10,7 @@ function Footer() {
       })
 
     return(
-        <section className="bg-orange-50 mt-0 xl:mt-16 mx-auto text-center">
+        <section className="bg-orange-50 mx-auto text-center">
         <article className="sm:container mx-auto py-16 px-10 xl:px-40 xl:flex flex-row">
             <div className="basis-full">
                 <h1>LOGO</h1>
