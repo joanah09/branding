@@ -5,7 +5,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import Home from './pages/home';
 import News from './pages/news';
-import NewsItem from './pages/newsItem';
+import NewsDetail from './pages/newsDetail';
 
 library.add(fab, fas)
 
@@ -15,11 +15,12 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/about" element={<News />} /> */}
           <Route path="/news" element={<News />} />
-          <Route path="/news-item" element={<NewsItem />} />
+          <Route path=":id" element={<NewsDetail />} />
         </Routes>
       </BrowserRouter>
+
+   
     </div>
   );
 }

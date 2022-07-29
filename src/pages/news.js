@@ -47,10 +47,11 @@ class News extends Component {
                         items.map(item => 
                         <Trending 
                         key={item.id} 
-                        type={item.type}
-                        image={item.attributes.posterImage}
-                        title={item.attributes.titles}
-                        attr={item.attributes}   
+                        item={item}
+                        // type={item.type}
+                        // image={item.attributes.posterImage}
+                        // title={item.attributes.titles}
+                        // attr={item.attributes}
                         />
                         )
                     }

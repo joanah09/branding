@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Trending from "./trending";
-import NewsItem from "../../pages/newsItem";
+import NewsDetail from "../../pages/newsDetail";
 
 class NewsComponent extends Component {
     constructor(props) {
@@ -24,7 +24,7 @@ class NewsComponent extends Component {
               isLoaded: true,
               items: result.data,
             });
-            console.log(result.data)
+            // console.log(result.data)
           },
           (error) => {
             this.setState({
@@ -73,11 +73,7 @@ class NewsComponent extends Component {
                     items.map(item => 
                     <Trending 
                     key={item.id}
-                    id={item.id}
-                    type={item.type}
-                    image={item.attributes.posterImage}
-                    title={item.attributes.titles}
-                    attr={item.attributes}   
+                    item={item}
                     />
                     )
                 }
