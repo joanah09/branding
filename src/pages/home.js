@@ -77,7 +77,7 @@ function Home() {
                     </article>
                 </section>
 
-                <TrendingComponent />
+                <TrendingComponent />                
                 <MovieComponent />
 
                 <section className="bg-white">

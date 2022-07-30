@@ -1,10 +1,9 @@
 function Movie(props) {
-    // console.log(props)
-    return (
-        <div className="">
+    // console.log("MOVIE SINGLE PAGE", props)
+
+    return (  
         <section className="mb-10 grid grid-cols-1 md:grid-cols-3 gap-x-8">
             <article className="px- py-1 col-span-2">
-                
                 <h3 className="text-2xl font-semibold">{props.title}</h3>
                 <div className="pt-3">
                     <p>{props.original_title} / {props.original_title_romanised}</p>
@@ -16,12 +15,14 @@ function Movie(props) {
                 </div>
                 <p className="text-base italic py-4">{props.description}</p>
                 <p>Credits to Studio Ghibli API</p>
+                {/* <Link id="movie" to={`/movie/${props.id}`} state={props}> MOVIE </Link> */}
+                
             </article>
             <article className="col-span-1">
                 <img className="object-cover h-96 mx-auto" src={props.image} />
             </article>
         </section>
-    </div>
+    
     )
 }
 

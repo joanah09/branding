@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Movie from "../movieComponent/movie"
 
 function MovieComponent() {
-    const [movieData, setMovieData] = useState([]) 
+    const [movieData, setMovieData] = useState([])     
     useEffect(() => {
         async function getData() {
             const res = await fetch("https://ghibliapi.herokuapp.com/films")
@@ -19,6 +19,7 @@ function MovieComponent() {
         return <Movie key={id} 
         {...item} /> 
      })
+     
     const movieSlider = {
         dots: true,
         infinite: true,
@@ -41,10 +42,9 @@ function MovieComponent() {
             <article className="sm:container mx-auto py-16 px-10 xl:px-40">
                 <Slider {...movieSlider}>
                     {movie}
-                </Slider>
+                </Slider>  
             </article> 
         </section>
-
     ) 
 }
 

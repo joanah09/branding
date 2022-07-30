@@ -2,7 +2,7 @@ export default {
     "navbar": [
         {
             "name": "About",
-            "link": ""
+            "link": "/about"
         },
         {
             "name": "News",
@@ -10,7 +10,7 @@ export default {
         },
         {
             "name": "Contact",
-            "link": ""
+            "link": "/contact"
         }
     ],
     "homepage": {

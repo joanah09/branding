@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Trending from "./trending";
 import NewsDetail from "../../pages/newsDetail";
 
 class NewsComponent extends Component {
@@ -71,7 +70,7 @@ class NewsComponent extends Component {
                 <Slider className="flex" {...newsSlider}>
                 {
                     items.map(item => 
-                    <Trending 
+                    <NewsDetail 
                     key={item.id}
                     item={item}
                     />
@@ -82,6 +81,7 @@ class NewsComponent extends Component {
                 <a href="/news" className="rounded-full transition-all ease-in-out hover:opacity-75 bg-slate-700 text-slate-50 px-14 py-2 xl:py-3">See More</a>
                 </div>
             </article> 
+
         </section>
 
         )

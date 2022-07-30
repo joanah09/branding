@@ -1,7 +1,5 @@
 import React, {Component} from "react";
-import Footer from "../components/footer/footer";
-import Navbar from "../components/Navbar/navbarComponent";
-import Trending from "../components/trendingComponent/trending";
+import NewsDetail from "../../pages/newsDetail";
 
 class News extends Component {
     constructor(props) {
@@ -12,7 +10,7 @@ class News extends Component {
         items: []
       };
     }
-  
+    
     componentDidMount() {
       fetch("https://kitsu.io/api/edge/trending/anime")
         .then(res => res.json())
@@ -21,8 +19,7 @@ class News extends Component {
             this.setState({
               isLoaded: true,
               items: result.data,
-            });
-            // console.log(result.data)
+            }); 
           },
           (error) => {
             this.setState({
@@ -34,31 +31,23 @@ class News extends Component {
     }
   
     render() {
-        const { items } = this.state;
-        
         return (
             <>
-                <Navbar />
-                <section className="bg-slate-50">
+              <section className="bg-slate-50">
                 <article className="sm:container mx-auto py-16 px-10 xl:px-40">
                     <h2 className="text-3xl xl:text-5xl font-bold xl:pt-4 pb-10">Trending Anime</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3">
-                    {
-                        items.map(item => 
-                        <Trending 
-                        key={item.id} 
-                        item={item}
-                        // type={item.type}
-                        // image={item.attributes.posterImage}
-                        // title={item.attributes.titles}
-                        // attr={item.attributes}
-                        />
-                        )
-                    }
-                    </div>
+                      { this.state.items &&
+                          this.state.items.map((item) => 
+                          <NewsDetail 
+                          key={item.id} 
+                          item={item}
+                          />
+                          )
+                      }
+                    </div>                      
                 </article> 
-                </section>
-                <Footer />
+              </section>
             </>
         )
     }
