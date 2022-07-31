@@ -18,8 +18,8 @@ function Movie(props) {
                 {/* <Link id="movie" to={`/movie/${props.id}`} state={props}> MOVIE </Link> */}
                 
             </article>
-            <article className="col-span-1">
-                <img className="object-cover h-96 mx-auto" src={props.image} />
+            <article className="col-span-1 order-first md:order-last">
+                <img className="object-cover h-96 mx-auto pb-5" src={props.image} />
             </article>
         </section>
     
